@@ -117,7 +117,8 @@
     .titles .main-title {
       font-size: 22px;
       font-weight: 700;
-      color: var(--upm-blue);
+      color: --upm-blue;
+      color: #003366;
     }
 
     .titles .sub-title {
@@ -339,11 +340,18 @@
 </div>
 
 <div class="page-wrapper">
-  <!-- ملاحظة: mailto يفتح برنامج البريد ويرسل نص البيانات إلى web.dev@upm.edu.sa -->
+
+  <!-- إرسال عبر formsubmit.co إلى web.dev@upm.edu.sa -->
   <form class="form-card"
-        action="mailto:web.dev@upm.edu.sa?subject=UPM%20Website%20Content%20Update%20Request"
+        action="https://formsubmit.co/web.dev@upm.edu.sa"
         method="POST"
-        enctype="text/plain">
+        enctype="multipart/form-data">
+
+    <!-- إعدادات خفية لـ FormSubmit -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <!-- حطي هنا رابط صفحة شكر (لما نسويها) أو خليه نفس الصفحة -->
+    <input type="hidden" name="_next" value="https://hanaa1r.github.io/upm-content-form/">
 
     <div class="header">
       <div class="header-logo-wrap">
@@ -357,9 +365,9 @@
 
     <p class="hint">
       يُستخدم هذا النموذج لاستقبال طلبات إضافة أو تحديث المحتوى في موقع الجامعة من قبل الكليات والإدارات،
-      لضمان توحيد البيانات، اكتمال العناصر، وتحديث الموقع بصورة دورية وفق الهوية الرسمية للجامعة.
-      عند الضغط على "إرسال الطلب" سيتم إنشاء رسالة بريد إلكتروني موجهة إلى
-      <strong>web.dev@upm.edu.sa</strong> تحتوي تفاصيل الطلب، ويمكن للمستخدم إرفاق الملفات قبل الإرسال.
+      لضمان توحيد البيانات وتحديث الموقع بصورة دورية وفق الهوية الرسمية.
+      يتم إرسال البيانات بشكل آمن إلى البريد:
+      <strong>web.dev@upm.edu.sa</strong>.
     </p>
 
     <!-- القسم الأول -->
@@ -369,7 +377,7 @@
     <div class="grid-2">
       <div>
         <label>اسم الجهة / الكلية <span class="en">(Department / College)</span></label>
-        <input type="text" name="Department" required />
+        <input type="text" name="Department / College" required />
       </div>
       <div>
         <label>اسم الشخص المسؤول <span class="en">(Contact Person)</span></label>
@@ -450,10 +458,9 @@
         <div class="ar">رفع الصور / الملفات ذات الصلة</div>
         <div class="en">(Upload Related Files)</div>
       </div>
-      <input type="file" multiple />
+      <input type="file" name="Attachments[]" multiple />
       <div class="note">
-        يرجى إرفاق الصور عالية الدقة وشعارات الشركاء (إن وجدت). عند ظهور رسالة البريد بعد الضغط على "إرسال الطلب"،
-        يمكن إضافة هذه الملفات كمرفقات قبل إرسال البريد إلى فريق الويب.
+        يرجى إرفاق الصور عالية الدقة والملفات ذات العلاقة (إن وجدت).
       </div>
     </div>
 
@@ -472,8 +479,8 @@
     <div class="submit-wrap">
       <button type="submit">إرسال الطلب / Submit Request</button>
       <div class="helper-text">
-        يتم إنشاء رسالة بريد إلكتروني موجهة إلى web.dev@upm.edu.sa تحتوي بيانات النموذج،
-        ويمكن اعتمادها كإجراء موحد لطلبات تحديث محتوى موقع الجامعة.
+        سيتم إرسال بيانات هذا النموذج مباشرة إلى البريد web.dev@upm.edu.sa عبر قناة آمنة،
+        ويمكن اعتماد هذا النموذج كآلية موحدة لطلبات تحديث محتوى موقع الجامعة.
       </div>
     </div>
 
