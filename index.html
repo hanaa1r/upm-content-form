@@ -51,9 +51,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
-      color: var(--upm-blue);
-      font-weight: 700;
+      overflow: hidden;
+    }
+
+    .top-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
 
     .top-bar-en {
@@ -95,11 +99,12 @@
       align-items: center;
       justify-content: center;
       background: #ffffff;
+      overflow: hidden;
     }
 
     .header-logo-wrap img {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 95%;
+      max-height: 95%;
       object-fit: contain;
     }
 
@@ -225,13 +230,36 @@
       border-color: var(--upm-blue);
     }
 
-    .file-input-wrapper {
-      border: 1px dashed #bbb;
-      border-radius: 10px;
-      padding: 9px;
+    /* Attachments block */
+    .file-block {
+      margin-top: 6px;
+      border-radius: 12px;
+      padding: 10px 12px;
+      background-color: #fafafa;
+      border: 1px solid #e0e0e0;
+    }
+
+    .file-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
       font-size: 11px;
-      background-color: #fcfcfc;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
+    }
+
+    .file-label-row .ar {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .file-label-row .en {
+      color: #777;
+      font-size: 10px;
+    }
+
+    input[type="file"] {
+      font-size: 11px;
     }
 
     .note {
@@ -299,7 +327,9 @@
 <!-- الشريط العلوي -->
 <div class="top-bar">
   <div class="top-bar-title">
-    <div class="top-logo">UPM</div>
+    <div class="top-logo">
+      <img src="upm-logo.png" alt="UPM Logo">
+    </div>
     <div>
       <div>جامعة الأمير مقرن بن عبدالعزيز</div>
       <div class="top-bar-en">University of Prince Mugrin</div>
@@ -309,7 +339,7 @@
 </div>
 
 <div class="page-wrapper">
-  <!-- ملاحظة: mailto يفتح برنامج البريد عند المرسل ويجمع البيانات كنص -->
+  <!-- ملاحظة: mailto يفتح برنامج البريد ويرسل نص البيانات إلى web.dev@upm.edu.sa -->
   <form class="form-card"
         action="mailto:web.dev@upm.edu.sa?subject=UPM%20Website%20Content%20Update%20Request"
         method="POST"
@@ -317,11 +347,7 @@
 
     <div class="header">
       <div class="header-logo-wrap">
-        <!-- ضعي رابط شعار الجامعة الرسمي هنا -->
-        <!-- مثال (حدّثيه حسب المسار الصحيح عندكم):
-        <img src="https://www.upm.edu.sa/themes/custom/upm/logo.svg" alt="شعار جامعة الأمير مقرن">
-        -->
-        <span style="font-size:11px;color:#777;">Logo</span>
+        <img src="upm-logo.png" alt="شعار جامعة الأمير مقرن">
       </div>
       <div class="titles">
         <div class="main-title">نموذج تحديث محتوى موقع الجامعة</div>
@@ -332,8 +358,8 @@
     <p class="hint">
       يُستخدم هذا النموذج لاستقبال طلبات إضافة أو تحديث المحتوى في موقع الجامعة من قبل الكليات والإدارات،
       لضمان توحيد البيانات، اكتمال العناصر، وتحديث الموقع بصورة دورية وفق الهوية الرسمية للجامعة.
-      عند الضغط على "إرسال الطلب" سيتم إنشاء رسالة بالبريد الإلكتروني موجهة إلى
-      <strong>web.dev@upm.edu.sa</strong> تحتوي تفاصيل الطلب.
+      عند الضغط على "إرسال الطلب" سيتم إنشاء رسالة بريد إلكتروني موجهة إلى
+      <strong>web.dev@upm.edu.sa</strong> تحتوي تفاصيل الطلب، ويمكن للمستخدم إرفاق الملفات قبل الإرسال.
     </p>
 
     <!-- القسم الأول -->
@@ -405,8 +431,7 @@
       </div>
       <div>
         <label>موقع المحتوى داخل موقع الجامعة <span class="en">(Page / Section)</span></label>
-        <input type="text" name="Site Location"
-               placeholder="مثال: الرئيسية / كلية الهندسة / الأخبار" />
+        <input type="text" name="Site Location" placeholder="مثال: الرئيسية / كلية الهندسة / الأخبار" />
       </div>
     </div>
 
@@ -419,14 +444,20 @@
     <div class="section-title">
       <span class="icon"></span> القسم الثالث: الوسائط المرفقة / Section 3: Attachments
     </div>
-    <div class="file-input-wrapper">
-      <label>رفع الصور / الملفات ذات الصلة (لن تُرسل تلقائياً عبر mailto، يرجى إرفاقها مع البريد اليدوي)</label>
+
+    <div class="file-block">
+      <div class="file-label-row">
+        <div class="ar">رفع الصور / الملفات ذات الصلة</div>
+        <div class="en">(Upload Related Files)</div>
+      </div>
+      <input type="file" multiple />
       <div class="note">
-        في النسخة الإنتاجية يمكن ربط النموذج بنظام داخلي أو خدمة مخصصة لاستقبال الملفات مباشرة.
+        يرجى إرفاق الصور عالية الدقة وشعارات الشركاء (إن وجدت). عند ظهور رسالة البريد بعد الضغط على "إرسال الطلب"،
+        يمكن إضافة هذه الملفات كمرفقات قبل إرسال البريد إلى فريق الويب.
       </div>
     </div>
 
-    <div>
+    <div style="margin-top:10px;">
       <label>روابط خارجية ذات صلة <span class="en">(Relevant Links)</span></label>
       <input type="text" name="Relevant Links" placeholder="مثال: رابط التسجيل، صفحة الشريك، إلخ" />
     </div>
@@ -441,8 +472,8 @@
     <div class="submit-wrap">
       <button type="submit">إرسال الطلب / Submit Request</button>
       <div class="helper-text">
-        عند الضغط على "إرسال الطلب" سيتم فتح رسالة بريد إلكتروني موجهة إلى web.dev@upm.edu.sa تحتوي بيانات النموذج،
-        ويمكن اعتمادها كإجراء موحد لطلبات تحديث المحتوى.
+        يتم إنشاء رسالة بريد إلكتروني موجهة إلى web.dev@upm.edu.sa تحتوي بيانات النموذج،
+        ويمكن اعتمادها كإجراء موحد لطلبات تحديث محتوى موقع الجامعة.
       </div>
     </div>
 
