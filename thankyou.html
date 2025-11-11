@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تم استلام طلبك | جامعة الأمير مقرن</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --upm-blue: #003366;
+      --upm-gold: #b08a2e;
+      --bg-light: #f5f5f5;
+      --radius-lg: 20px;
+      --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Tajawal", system-ui, sans-serif;
+      background-color: var(--bg-light);
+      color: #222;
+    }
+
+    /* Top bar */
+    .top-bar {
+      width: 100%;
+      background: var(--upm-blue);
+      color: #fff;
+      padding: 8px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      border-bottom: 3px solid var(--upm-gold);
+    }
+
+    .top-bar-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .top-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .top-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .top-bar-en {
+      opacity: 0.9;
+      font-size: 10px;
+    }
+
+    .page-wrapper {
+      min-height: calc(100vh - 60px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 12px 40px;
+    }
+
+    .card {
+      max-width: 520px;
+      width: 100%;
+      background: #fff;
+      padding: 28px 24px 24px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(0,0,0,0.03);
+      text-align: center;
+    }
+
+    .logo-wrapper {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(0,0,0,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .logo-wrapper img {
+      max-width: 96%;
+      max-height: 96%;
+      object-fit: contain;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--upm-blue);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--upm-gold);
+    }
+
+    p {
+      margin: 0 0 10px;
+      font-size: 13px;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    .en-note {
+      font-size: 10px;
+      color: #888;
+      margin-bottom: 18px;
+    }
+
+    .btn-wrap {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to left, var(--upm-blue), #001a33);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--upm-blue);
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .btn-ghost:hover {
+      background: #f3f6fa;
+    }
+
+    .footer {
+      margin-top: 18px;
+      font-size: 9px;
+      color: #999;
+      text-align: center;
+      direction: ltr;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 22px 16px 18px;
+        border-radius: 14px;
+      }
+      h1 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- الشريط العلوي -->
+<div class="top-bar">
+  <div class="top-bar-title">
+    <div class="top-logo">
+      <img src="upm-logo.png" alt="UPM Logo">
+    </div>
+    <div>
+      <div>جامعة الأمير مقرن بن عبدالعزيز</div>
+      <div class="top-bar-en">University of Prince Mugrin</div>
+    </div>
+  </div>
+  <div class="top-bar-en">UPM Web Content Update</div>
+</div>
+
+<div class="page-wrapper">
+  <div class="card">
+    <div class="logo-wrapper">
+      <img src="upm-logo.png" alt="جامعة الأمير مقرن">
+    </div>
+    <h1>تم استلام طلبك بنجاح</h1>
+    <h2>Thank you for your submission</h2>
+
+    <p>
+      نشكركم على تعبئة نموذج تحديث محتوى موقع الجامعة.
+      سيتم مراجعة الطلب من قبل الفريق المختص والتواصل عند الحاجة لاستكمال أي بيانات.
+    </p>
+    <p class="en-note">
+      Your request has been sent successfully to the web team.  
+      They will review the submitted content and follow up if any further information is required.
+    </p>
+
+    <div class="btn-wrap">
+      <a href="index.html" class="btn btn-primary">إرسال طلب جديد</a>
+      <a href="https://upm.edu.sa" class="btn btn-ghost">العودة إلى موقع الجامعة</a>
+    </div>
+
+    <div class="footer">
+      © University of Prince Mugrin — Web Content Team
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
