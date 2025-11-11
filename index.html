@@ -19,12 +19,11 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: "Tajawal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: "Tajawal", system-ui, sans-serif;
       background-color: var(--bg-light);
       color: #222;
     }
 
-    /* Top bar */
     .top-bar {
       width: 100%;
       background: var(--upm-blue);
@@ -54,21 +53,10 @@
       overflow: hidden;
     }
 
-    .top-logo img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
-    .top-bar-en {
-      opacity: 0.9;
-      font-size: 10px;
-    }
+    .top-logo img { max-width: 100%; }
 
     .page-wrapper {
-      min-height: calc(100vh - 60px);
       display: flex;
-      align-items: flex-start;
       justify-content: center;
       padding: 32px 12px 40px;
     }
@@ -76,7 +64,7 @@
     .form-card {
       width: 100%;
       max-width: 980px;
-      background-color: #fff;
+      background: #fff;
       border-radius: var(--radius-lg);
       padding: 26px 22px 22px;
       box-shadow: var(--shadow-soft);
@@ -104,20 +92,12 @@
 
     .header-logo-wrap img {
       max-width: 95%;
-      max-height: 95%;
-      object-fit: contain;
-    }
-
-    .titles {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
     }
 
     .titles .main-title {
       font-size: 22px;
       font-weight: 700;
-      color: #003366;
+      color: var(--upm-blue);
     }
 
     .titles .sub-title {
@@ -125,31 +105,11 @@
       color: var(--upm-gold);
     }
 
-    .hint {
-      font-size: 12px;
-      color: #555;
-      margin-bottom: 18px;
-      border-right: 3px solid var(--upm-gold);
-      padding-right: 10px;
-      line-height: 1.8;
-    }
-
     .section-title {
       margin: 20px 0 8px;
       font-size: 14px;
       font-weight: 600;
       color: var(--upm-blue);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .section-title span.icon {
-      width: 8px;
-      height: 8px;
-      border-radius: 2px;
-      background-color: var(--upm-gold);
-      display: inline-block;
     }
 
     .grid-2 {
@@ -162,122 +122,29 @@
       font-size: 12px;
       font-weight: 500;
       color: #333;
-      display: block;
       margin-bottom: 3px;
     }
 
-    label span.en {
-      font-size: 10px;
-      color: #888;
-      margin-right: 4px;
-      font-weight: 400;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="date"],
-    textarea,
-    select {
+    input, textarea, select {
       width: 100%;
       padding: 7px 8px;
       border-radius: 8px;
       border: 1px solid #ddd;
       font-size: 12px;
-      outline: none;
-      transition: all 0.18s ease;
-      background-color: #fafafa;
+      background: #fafafa;
     }
 
-    textarea {
-      min-height: 70px;
-      resize: vertical;
-    }
+    textarea { min-height: 70px; resize: vertical; }
 
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: var(--upm-blue);
-      background-color: #fff;
-      box-shadow: 0 0 0 2px rgba(0,51,102,0.06);
-    }
-
-    .type-options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 11px;
-      margin-top: 2px;
-    }
-
-    .chip-label {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid #ddd;
-      background-color: #fafafa;
-      cursor: pointer;
-      transition: all 0.18s ease;
-    }
-
-    .chip-label input {
-      margin: 0;
-    }
-
-    .chip-label:hover {
-      border-color: var(--upm-blue);
-    }
-
-    /* Attachments block */
     .file-block {
       margin-top: 6px;
       border-radius: 12px;
       padding: 10px 12px;
-      background-color: #fafafa;
+      background: #fafafa;
       border: 1px solid #e0e0e0;
     }
 
-    .file-label-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-      margin-bottom: 4px;
-    }
-
-    .file-label-row .ar {
-      font-weight: 500;
-      color: #333;
-    }
-
-    .file-label-row .en {
-      color: #777;
-      font-size: 10px;
-    }
-
-    input[type="file"] {
-      font-size: 11px;
-    }
-
-    .note {
-      font-size: 10px;
-      color: #777;
-      margin-top: 3px;
-    }
-
-    .submit-wrap {
-      display: flex;
-      justify-content: flex-start;
-      margin-top: 18px;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    button[type="submit"] {
+    button {
       padding: 8px 20px;
       border-radius: 999px;
       border: none;
@@ -286,39 +153,20 @@
       font-weight: 600;
       background: linear-gradient(to left, var(--upm-blue), #001a33);
       color: #fff;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-      transition: all 0.2s ease;
+      margin-top: 15px;
     }
 
-    button[type="submit"]:hover {
+    button:hover {
       transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.22);
-    }
-
-    .helper-text {
-      font-size: 10px;
-      color: #888;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
     }
 
     .footer {
       margin-top: 18px;
-      font-size: 9px;
+      font-size: 10px;
       color: #999;
       text-align: left;
       direction: ltr;
-    }
-
-    @media (max-width: 600px) {
-      .form-card {
-        padding: 18px 14px 16px;
-        border-radius: 14px;
-      }
-      .titles .main-title {
-        font-size: 18px;
-      }
-      .top-bar {
-        padding: 6px 10px;
-      }
     }
   </style>
 </head>
@@ -327,34 +175,27 @@
 <!-- الشريط العلوي -->
 <div class="top-bar">
   <div class="top-bar-title">
-    <div class="top-logo">
-      <img src="upm-logo.png" alt="UPM Logo">
-    </div>
+    <div class="top-logo"><img src="upm-logo.png" alt="UPM Logo"></div>
     <div>
       <div>جامعة الأمير مقرن بن عبدالعزيز</div>
-      <div class="top-bar-en">University of Prince Mugrin</div>
+      <div style="font-size:10px;opacity:0.9;">University of Prince Mugrin</div>
     </div>
   </div>
-  <div class="top-bar-en">UPM Website Content Update Request</div>
+  <div style="font-size:10px;opacity:0.9;">UPM Website Content Update Form</div>
 </div>
 
 <div class="page-wrapper">
-
-  <!-- الفورم: إرسال مباشر وآمن إلى web.dev@upm.edu.sa عبر FormSubmit -->
   <form class="form-card"
-        action="https://formsubmit.co/web.dev@upm.edu.sa"
+        action="https://formspree.io/f/mvgdoqej"
         method="POST"
         enctype="multipart/form-data">
 
-    <!-- إعدادات FormSubmit -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_subject" value="UPM Website Content Update Request">
-    <input type="hidden" name="_next" value="https://hanaa1r.github.io/upm-content-form/">
+    <!-- ✅ إعادة التوجيه بعد الإرسال -->
+    <input type="hidden" name="_redirect" value="https://hanaa1r.github.io/upm-content-form/thankyou.html">
 
     <div class="header">
       <div class="header-logo-wrap">
-        <img src="upm-logo.png" alt="شعار جامعة الأمير مقرن">
+        <img src="upm-logo.png" alt="شعار جامعة الأمير مقرن" />
       </div>
       <div class="titles">
         <div class="main-title">نموذج تحديث محتوى موقع الجامعة</div>
@@ -362,61 +203,34 @@
       </div>
     </div>
 
-    <p class="hint">
-      يُستخدم هذا النموذج لاستقبال طلبات إضافة أو تحديث المحتوى في موقع الجامعة من قبل الكليات والإدارات،
-      لضمان توحيد البيانات وتحديث الموقع بصورة دورية وفق الهوية الرسمية للجامعة.
-      يتم إرسال البيانات بشكل منظم إلى البريد
-      <strong>web.dev@upm.edu.sa</strong>.
-    </p>
-
-    <!-- القسم الأول -->
-    <div class="section-title">
-      <span class="icon"></span> القسم الأول: معلومات الجهة / Section 1: Department Info
-    </div>
     <div class="grid-2">
       <div>
-        <label>اسم الجهة / الكلية <span class="en">(Department / College)</span></label>
-        <input type="text" name="Department / College" required />
+        <label>اسم الجهة / الكلية</label>
+        <input type="text" name="Department" required>
       </div>
       <div>
-        <label>اسم الشخص المسؤول <span class="en">(Contact Person)</span></label>
-        <input type="text" name="Contact Person" required />
+        <label>اسم الشخص المسؤول</label>
+        <input type="text" name="Contact Person" required>
       </div>
       <div>
-        <label>البريد الإلكتروني الرسمي <span class="en">(Official Email)</span></label>
-        <input type="email" name="Official Email" required />
+        <label>البريد الإلكتروني الرسمي</label>
+        <input type="email" name="Official Email" required>
       </div>
       <div>
-        <label>رقم التواصل (اختياري) <span class="en">(Phone - Optional)</span></label>
-        <input type="tel" name="Phone" />
+        <label>رقم التواصل (اختياري)</label>
+        <input type="tel" name="Phone">
       </div>
     </div>
 
-    <!-- القسم الثاني -->
-    <div class="section-title">
-      <span class="icon"></span> القسم الثاني: تفاصيل المحتوى / Section 2: Content Details
-    </div>
-
-    <div>
-      <label>نوع المحتوى <span class="en">(Content Type)</span></label>
-      <div class="type-options">
-        <label class="chip-label"><input type="radio" name="Content Type" value="خبر / News" required> خبر / News</label>
-        <label class="chip-label"><input type="radio" name="Content Type" value="فعالية / Event"> فعالية / Event</label>
-        <label class="chip-label"><input type="radio" name="Content Type" value="إعلان / Announcement"> إعلان / Announcement</label>
-        <label class="chip-label"><input type="radio" name="Content Type" value="مبادرة / Initiative"> مبادرة / Initiative</label>
-        <label class="chip-label"><input type="radio" name="Content Type" value="برنامج أكاديمي / Program"> برنامج أكاديمي / Program</label>
-        <label class="chip-label"><input type="radio" name="Content Type" value="أخرى / Other"> أخرى / Other</label>
-      </div>
-    </div>
-
+    <div class="section-title">تفاصيل المحتوى</div>
     <div class="grid-2">
       <div>
         <label>عنوان المحتوى (بالعربية)</label>
-        <input type="text" name="Title (AR)" required />
+        <input type="text" name="Title (AR)" required>
       </div>
       <div>
         <label>Title in English</label>
-        <input type="text" name="Title (EN)" />
+        <input type="text" name="Title (EN)">
       </div>
     </div>
 
@@ -433,59 +247,33 @@
 
     <div class="grid-2">
       <div>
-        <label>تاريخ النشر المقترح <span class="en">(Proposed Publish Date)</span></label>
-        <input type="date" name="Proposed Publish Date" />
+        <label>تاريخ النشر المقترح</label>
+        <input type="date" name="Proposed Publish Date">
       </div>
       <div>
-        <label>موقع المحتوى داخل موقع الجامعة <span class="en">(Page / Section)</span></label>
-        <input type="text" name="Site Location" placeholder="مثال: الرئيسية / كلية الهندسة / الأخبار" />
+        <label>موقع المحتوى داخل الموقع</label>
+        <input type="text" name="Site Location" placeholder="مثال: الرئيسية / كلية الهندسة / الأخبار">
       </div>
-    </div>
-
-    <div>
-      <label>الكلمات المفتاحية (إن وُجدت) <span class="en">(Keywords)</span></label>
-      <input type="text" name="Keywords" placeholder="افصل بين الكلمات بفاصلة" />
-    </div>
-
-    <!-- القسم الثالث -->
-    <div class="section-title">
-      <span class="icon"></span> القسم الثالث: الوسائط المرفقة / Section 3: Attachments
     </div>
 
     <div class="file-block">
-      <div class="file-label-row">
-        <div class="ar">رفع الصور / الملفات ذات الصلة</div>
-        <div class="en">(Upload Related Files)</div>
-      </div>
-      <input type="file" name="Attachments[]" multiple />
-      <div class="note">
-        يرجى إرفاق الصور عالية الدقة والملفات ذات العلاقة (إن وجدت).
-      </div>
+      <label>رفع الصور / الملفات ذات الصلة</label>
+      <input type="file" name="Attachments" multiple>
     </div>
 
-    <div style="margin-top:10px;">
-      <label>روابط خارجية ذات صلة <span class="en">(Relevant Links)</span></label>
-      <input type="text" name="Relevant Links" placeholder="مثال: رابط التسجيل، صفحة الشريك، إلخ" />
+    <div>
+      <label>روابط خارجية ذات صلة</label>
+      <input type="text" name="Relevant Links">
     </div>
 
-    <!-- القسم الرابع -->
-    <div class="section-title">
-      <span class="icon"></span> القسم الرابع: ملاحظات إضافية / Section 4: Notes
-    </div>
-    <textarea name="Additional Notes" placeholder="أي ملاحظات خاصة بالنشر، مدة العرض، أو إبراز المحتوى..."></textarea>
-
-    <!-- إرسال -->
-    <div class="submit-wrap">
-      <button type="submit">إرسال الطلب / Submit Request</button>
-      <div class="helper-text">
-        سيتم إرسال بيانات هذا النموذج مباشرة إلى البريد web.dev@upm.edu.sa بشكل منظم،
-        ويمكن اعتماد هذا النموذج كآلية موحدة لطلبات تحديث محتوى موقع الجامعة.
-      </div>
+    <div>
+      <label>ملاحظات إضافية</label>
+      <textarea name="Additional Notes"></textarea>
     </div>
 
-    <div class="footer">
-      © University of Prince Mugrin — Website Content Update Form
-    </div>
+    <button type="submit">إرسال الطلب / Submit Request</button>
+
+    <div class="footer">© University of Prince Mugrin — Website Content Update Form</div>
   </form>
 </div>
 
