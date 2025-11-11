@@ -117,7 +117,6 @@
     .titles .main-title {
       font-size: 22px;
       font-weight: 700;
-      color: --upm-blue;
       color: #003366;
     }
 
@@ -341,16 +340,16 @@
 
 <div class="page-wrapper">
 
-  <!-- إرسال عبر formsubmit.co إلى web.dev@upm.edu.sa -->
+  <!-- الفورم: إرسال مباشر وآمن إلى web.dev@upm.edu.sa عبر FormSubmit -->
   <form class="form-card"
         action="https://formsubmit.co/web.dev@upm.edu.sa"
         method="POST"
         enctype="multipart/form-data">
 
-    <!-- إعدادات خفية لـ FormSubmit -->
+    <!-- إعدادات FormSubmit -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
-    <!-- حطي هنا رابط صفحة شكر (لما نسويها) أو خليه نفس الصفحة -->
+    <input type="hidden" name="_subject" value="UPM Website Content Update Request">
     <input type="hidden" name="_next" value="https://hanaa1r.github.io/upm-content-form/">
 
     <div class="header">
@@ -365,8 +364,8 @@
 
     <p class="hint">
       يُستخدم هذا النموذج لاستقبال طلبات إضافة أو تحديث المحتوى في موقع الجامعة من قبل الكليات والإدارات،
-      لضمان توحيد البيانات وتحديث الموقع بصورة دورية وفق الهوية الرسمية.
-      يتم إرسال البيانات بشكل آمن إلى البريد:
+      لضمان توحيد البيانات وتحديث الموقع بصورة دورية وفق الهوية الرسمية للجامعة.
+      يتم إرسال البيانات بشكل منظم إلى البريد
       <strong>web.dev@upm.edu.sa</strong>.
     </p>
 
@@ -479,7 +478,7 @@
     <div class="submit-wrap">
       <button type="submit">إرسال الطلب / Submit Request</button>
       <div class="helper-text">
-        سيتم إرسال بيانات هذا النموذج مباشرة إلى البريد web.dev@upm.edu.sa عبر قناة آمنة،
+        سيتم إرسال بيانات هذا النموذج مباشرة إلى البريد web.dev@upm.edu.sa بشكل منظم،
         ويمكن اعتماد هذا النموذج كآلية موحدة لطلبات تحديث محتوى موقع الجامعة.
       </div>
     </div>
